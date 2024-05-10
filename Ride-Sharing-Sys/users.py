@@ -40,3 +40,18 @@ class Rider(User):
     # Show Current Ride
     def show_current_ride(self):
         print(self.current_ride)
+
+
+class Driver(User):
+    def __init__(self, name, email, nid, current_location) -> None:
+        super().__init__(name, email, nid)
+        self.current_location = current_location
+        self.wallet = 0
+
+    # Display Profile
+    def display_profile(self):
+        print(f"Driver Name: {self.name}")
+
+    # Accept The Ride
+    def accept_ride(self, ride):
+        pass
