@@ -12,11 +12,11 @@ class User(ABC):
         raise NotImplementedError
     
 class Rider(User):
-    def __init__(self, name, email, nid, current_location, initial_ammount) -> None:
+    def __init__(self, name, email, nid, current_location, initial_amount) -> None:
         super().__init__(name, email, nid)
         self.current_ride = None
         self.current_location = current_location
-        self.wallet = initial_ammount
+        self.wallet = initial_amount
 
     # Display Profile
     def display_profile(self):
